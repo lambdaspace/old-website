@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+
+                            
+/* TEAM */
+
+Developer: Clifton Canady                            
+Site: email, link to a contact form, etc.      
+Twitter: @cliftoncanady.
+Location: Greenville,SC USA.
+
+    --  -- 
+
+# THANKS
+
+ Name: Samantha Warrens -- @samanthatoy 
+ Name: Chris Coyier -- @chriscoyier 
+
+/* SITE */
+
+                            
+Last update: 2014/08/24                           
+Standards: HTML5, CSS3,..                    
+Components:  Zurb Foundation 5, Font Awesome, Modernizr, jQuery                     
+Software: GruntJS, SASS

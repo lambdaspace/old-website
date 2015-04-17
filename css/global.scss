@@ -1,0 +1,387 @@
+$backgroundColor: #eee;
+$spacing: 2rem;
+$links: #35a8ff;
+
+
+@import "libs/normalize";
+@import "libs/foundation/foundation/_settings";
+@import "libs/foundation/foundation";
+// @import "libs/foundation/foundicons";
+@import "libs/font-awesome/font-awesome";
+// http://owlgraphic.com/owlcarousel/
+@import "libs/owl.carousel";
+// @import "libs/flickrbomb";
+
+@import "owl.theme";
+
+
+
+/*
+   Custom Mixins
+   ========================================================================== */
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+ }
+
+$deg: -30deg;
+
+.rotate {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@font-face {
+font-family:'Colfax-Regular';
+src:url(/fonts/Colfax/Colfax-Regular.eot);
+src:url(/fonts/Colfax/Colfax-Regular.eot?#iefix) format("embedded-opentype"),url(/fonts/Colfax/Colfax-Regular.woff) format("woff"),url(/fonts/Colfax/Colfax-Regular.ttf) format("truetype"),url(/fonts/Colfax/Colfax-Regular.svg#svgFontName) format("svg")
+}
+
+@font-face {
+font-family:'Colfax-Medium';
+src:url(/fonts/Colfax/Colfax-Medium.eot);
+src:url(/fonts/Colfax/Colfax-Medium.eot?#iefix) format("embedded-opentype"),url(/fonts/Colfax/Colfax-Medium.woff) format("woff"),url(/fonts/Colfax/Colfax-Medium.ttf) format("truetype"),url(/fonts/Colfax/Colfax-Medium.svg#svgFontName) format("svg")
+}
+
+@font-face {
+font-family:'Colfax-Bold';
+src:url(/fonts/Colfax/Colfax-Bold.eot);
+src:url(/fonts/Colfax/Colfax-Bold.eot?#iefix) format("embedded-opentype"),url(/fonts/Colfax/Colfax-Bold.woff) format("woff"),url(/fonts/Colfax/Colfax-Bold.ttf) format("truetype"),url(/fonts/Colfax/Colfax-Bold.svg#svgFontName) format("svg")
+}
+
+body {
+  background: $smoke;
+  font-size: 60%;
+  color: $charcoal;
+}
+
+hr.hr-alt {
+  margin: 20px 0;
+}
+
+/*
+** clear custom panel 
+**-------------------------------------------------------------------*/
+.clear-panel {
+  @include panel(
+    // Sets the panel background color. Default: $panel-pg
+    $bg: $transparent,
+    // Sets the panel padding amount. Default: $panel-padding
+    $padding:00px,
+    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
+    $adjust:true
+  );
+  text-align: center;
+  border: 0;
+}
+
+/*
+   HEADER SECTION
+   ========================================================================== */
+.header-section {
+  margin-bottom: 15px;
+}
+
+/*
+   Color Blocks
+   ========================================================================== */
+/*
+** Color Block Squares 
+**-------------------------------------------------------------------*/
+.color-blocks {
+  @include thumb(
+    // Width of border around thumbnail
+    $border-width: 5px,
+    // Box shadow to apply to thumbnail
+    $box-shadow: 0 0 0 1px rgba(#000,.2),
+    // Box shadow to apply on hover
+    $box-shadow-hover: 0 0 6px 1px rgba(#ccc,0.5)
+    
+  );
+  margin-top: 25px; 
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+}
+/*
+** Color Block Colors
+**-------------------------------------------------------------------*/
+.cb-1 {
+   background: $primary-color;
+}
+.cb-2 {
+  background: darken($primary-color, 5%);
+}
+.cb-3 {
+   background: darken($primary-color, 10%);
+}
+.cb-4 {
+  background: darken($primary-color, 15%);
+}
+.cb-5 {
+   background: darken($primary-color, 20%);
+}
+.cb-6 {
+  background: darken($primary-color, 25%);
+}
+
+
+/*
+   Logo and Slider
+   ========================================================================== */
+/*
+** Logo 
+**-------------------------------------------------------------------*/
+img.logo {
+    width:400px;
+  }
+
+/*
+** OWL Carousel
+** Touch enabled jQuery plugin that lets you create beautiful responsive
+** carousel slider. 
+** Website documentation: http://owlgraphic.com/owlcarousel/index.html 
+**-------------------------------------------------------------------*/
+#owl-demo .item{
+  // margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/*
+   Text Block and Default Buttons
+   ========================================================================== */
+/*
+** Text Block Squares
+**-------------------------------------------------------------------*/
+
+.texture-blocks {
+  @include thumb(
+    // Width of border around thumbnail
+    $border-width: 5px,
+    // Box shadow to apply to thumbnail
+    $box-shadow: 0 0 0 1px rgba(#000,.2),
+    // Box shadow to apply on hover
+    $box-shadow-hover: 0 0 6px 1px rgba(#ccc,0.5)
+    
+  );
+  margin-top: 25px; 
+  margin-right: 5px;
+  height: 105px;
+  width: 105px;
+  &.first {
+    margin-left: 5px;
+  }
+}
+/*
+** Texture Block Textures
+**-------------------------------------------------------------------*/
+.tb-1 {
+   background: $primary-color;
+}
+.tb-2 {
+  background: darken($primary-color, 5%);
+}
+.tb-3 {
+   background: darken($primary-color, 10%);
+}
+.tb-4 {
+  background: darken($primary-color, 15%);
+}
+
+/*
+** Default Buttons 
+**-------------------------------------------------------------------*/
+.custom-button {
+  @include button();
+  margin: 25px 15px;
+  padding: 15px 50px; 
+}
+.custom-button-radius {
+  @include button($radius:3px);
+  margin: 25px 15px; 
+  padding: 15px 50px;
+  background: darken($primary-color, 10%);
+  &:hover {
+    background: darken($primary-color, 15%);
+  }
+} 
+
+.content {
+  h1 {margin-top: 20px;
+    margin-bottom: 5px;}
+  h2 {margin-top: 20px;
+    margin-bottom: 5px;}
+  p {margin: 50px 0 10px 0;}
+  // a {margin: 20px 0 5px 0;}
+
+}
+/*
+** Font Type : Font: Name #hexcode 
+**-------------------------------------------------------------------*/
+span {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: $aluminum;
+  &.h1-font {
+  }
+  &.h2-font {
+  }
+  &.p-font {
+  }
+  &.alink-font {
+    
+  }
+  &.social {
+    color: $jumbo;
+  }
+  &.social-header {
+    color: $jumbo;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+
+/*
+** Wiget Areas Blocks 
+**-------------------------------------------------------------------*/
+.learn-links {
+  font-size: 1rem;
+  margin: 30px 0;
+  text-align: center;
+  padding: 10px 25px 0 15px;
+  height:250px;
+  border-left: 1px solid rgba($iron, .8);
+  // font-family: sans-serif;
+  h4 {margin: 20px 0 0 0;}
+  p {margin:10px 0;
+  line-height: 1.2;
+  font-size: .87rem;
+  font-weight: 800;
+  }
+  ul {
+    margin-left: 0;
+    li {
+      display: block;
+    }
+  }
+  //This .first class takes the left border disapear 
+  &.first {
+    border-left: 0px solid rgba($iron, .8);
+    ul {
+      margin-left: 0;
+      li {
+        display: block;
+      }
+    }
+  }
+
+}
+/*
+** Wiget Areas Buttons 
+**-------------------------------------------------------------------*/
+.widget-button {
+  @include button();
+  margin: 10px 20px;
+  padding: 5px 50px;
+
+}
+
+/*
+   Footer and Footer Widgets
+   ========================================================================== */
+.footer-section {
+  font-size: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
+  background: $oil;
+  color: $white;
+  span.title {
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    padding-left: 35px;
+    color: lighten($oil, 15%);
+    &:before {
+      content: "\f1d8";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+  /*--adjust as necessary--*/
+      color: lighten($oil, 20%);
+      font-size: 18px;
+      padding-right: 0.5em;
+      position: absolute;
+      top: 8px;
+      left: 0px;
+    }
+  }
+  span.blub {
+    display: block;
+    color: lighten($oil, 15%);
+    font-size: 0.75rem;
+    padding-left: 35px;
+    line-height: 18px;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+}
+
+
+
+/*
+   Media Queries
+   ========================================================================== */
+@media #{$small-only} { 
+/*
+** Wiget Areas Blocks 
+**-------------------------------------------------------------------*/
+  .learn-links {
+    margin: 30px 0;
+    text-align: center;
+    padding: 10px 25px 0 15px;
+    height:250px;
+    border-left: 0px solid rgba($iron, .8);
+    h4 {margin: 20px 0 0 0;}
+    p {margin:10px 0;
+    line-height: 1.2;}
+    ul {
+      margin-left: 0;
+      li {
+        display: block;
+      }
+    }
+    &.first {
+      border-left: 0px solid rgba($iron, .8);
+      ul {
+        margin-left: 0;
+        li {
+          display: block;
+        }
+      }
+    }
+
+  }
+}
+
+
+
