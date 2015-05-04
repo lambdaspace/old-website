@@ -38,6 +38,12 @@
       <div class="small-12 medium-12 large-2 text-center columns">
         <img src="images/logo.png" alt="Yeti Image">
         <hr class="hr-alt">
+
+        <div class="text-center">
+          <p id="status">
+
+       </div>
+        <hr class="hr-alt">
         <div class="text-center">
           <h3>Events</h3>
           <p><a href="http://wiki.techministry.gr/index.php/CNC">4/5 18:00-21:00 </br> CNC Project Meetup</a></p>
@@ -131,5 +137,17 @@
   <!-- END FOOTER SECTION -->
   <script src="js/build/production.min.js"></script>
 </body>
+
+<script>
+    jQuery.get('hackers.txt',function (data){
+      hackers = data;
+      if(hackers>1){
+        text=hackers+" hackers in space, means that space is now open!"
+      }else{
+        text=hackers+" hackers in space, means that space is now closed!"
+      }
+      document.getElementById("status").textContent=text;
+    });
+</script>
 
 </html>
