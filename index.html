@@ -141,8 +141,11 @@
 
 <script>
     jQuery.get('hackers.txt',function (data){
-      hackers = data;
-      if(hackers>1){
+      hackers = parseInt(data);
+      if(isNaN(hackers)){
+      	return;
+      }
+      if(hackers>0){
         text=hackers+" hackers in space, means that space is now open!"
       }else{
         text=hackers+" hackers in space, means that space is now closed!"
