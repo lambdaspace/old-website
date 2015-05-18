@@ -15,8 +15,7 @@
   <div class="contain-to-grid header-section sticky">
     <!-- TOPBAR SECTION -->
     <nav class="top-bar" data-topbar>
-      <section class="top-bar-section">
-        <ul class="left">
+        <ul class="title-area">
           <li class="name">
             <h1>
               <a href="#">
@@ -24,6 +23,15 @@
               </a>
             </h1>
           </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon">
+            <a href="#">
+              <span>
+                Menu
+              </span>
+            </a>
+          </li>
+        </ul>
           <li class="name">
             <h1>
               <a href="http://wiki.techministry.gr/">
@@ -31,14 +39,15 @@
               </a>
             </h1>
           </li>
-          <li class="name">
-            <h1>
-              <a href="#">
-                <strong>Calendar</strong>
-              </a>
-            </h1>
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <section class="top-bar-section" style="left: 0%;">
+          <ul vlass="left">
+            <li class="name">
+              <h1>
+                <a href="#">
+                  <strong>Calendar</strong>
+                </a>
+              </h1>
+            </li>
         </ul>
       </section>
     </nav>
