@@ -169,12 +169,12 @@
       hackers = parseInt(data);
       if(isNaN(hackers)){
       	return;
-      }
-      if(hackers>0){
-        text=hackers+" hackers in space, means that space is now open!"
+      }else if(hackers>2){
+        text=hackers-2+" hackers in space, means that space is now open!"
       }else{
-        text=hackers+" hackers in space, means that space is now closed!"
+        text="0 hackers in space, means that space is now closed!"
       }
+
       document.getElementById("status").textContent=text;
     });
 </script>
