@@ -172,8 +172,8 @@
       hackers = parseInt(data);
       if(isNaN(hackers)){
         text="Hm, something is wrong with our status indicator. You can call to check if someone is in space."
-      }else if(hackers>2){
-        text=hackers-2+" hackers in space, means that space is now open!"
+      }else if(hackers>0){
+        text=hackers+" hackers in space, means that space is now open!"
       }else{
         text="0 hackers in space, means that space is now closed!"
       }
