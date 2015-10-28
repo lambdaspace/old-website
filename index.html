@@ -69,10 +69,8 @@
 
        </div>
         <hr class="hr-alt">
-        <div class="text-center">
+        <div class="text-center" id="events-container">
           <h3>Events</h3>
-            <p>22/10 20:00 - 22:00<br> <a href="http://www.openthessaloniki.org/2015/10/18/open-thessaloniki-season-3-the-warm-up/">Open Thessaloniki / Season 3 -The Warm-up</a> </p>
-            <p>29/10 20:00 - 22:00<br> <a href="http://www.meetup.com/Thessaloniki-Node-js-Meetup/events/226210346/">NodeJS: Scope and TDD - Once and for all</a> </p>
           <hr class="hr-alt">
 
         </div>
@@ -177,6 +175,14 @@
       }
 
       document.getElementById("status").textContent=text;
+    });
+
+    $.getJSON("./events.json", function(data) {
+      var eventsContainer = $('#events-container');
+      $.each( data, function( key, val ) {
+        console.log("test" + val);
+        eventsContainer.append( "<p>" + val.time + "<br> <a href=\"" + val.link + "\">" + val.desc + "</a> </p>");
+      });
     });
 </script>
 
