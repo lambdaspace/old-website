@@ -179,7 +179,12 @@
     $.getJSON("./events.json", function(data) {
       var eventsContainer = $('#events-container');
       $.each( data, function( key, val ) {
-        eventsContainer.append( "<p>" + val.time + "<br> <a href=\"" + val.link + "\">" + val.desc + "</a> </p>");
+        if (val.time && val.link && val.desc){
+          eventsContainer.append( "<p>" + val.time + "<br> <a href=\"" + val.link + "\">" + val.desc + "</a> </p>");
+        }else{
+          eventsContainer.append("<p>More events are coming soon</br> Do you have an idea about an event? Contact us!</p>")
+        }
+
       });
     });
 </script>
