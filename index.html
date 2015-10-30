@@ -69,10 +69,10 @@
 
        </div>
         <hr class="hr-alt">
-        <div class="text-center" id="events-container">
+        <div class="text-center">
           <h3>Events</h3>
+          <div id="events-container" />
           <hr class="hr-alt">
-
         </div>
       </div>
       <div style="margin-top:25px;" class="small-12 medium-7 large-7 columns">
@@ -180,7 +180,6 @@
     $.getJSON("./events.json", function(data) {
       var eventsContainer = $('#events-container');
       $.each( data, function( key, val ) {
-        console.log("test" + val);
         eventsContainer.append( "<p>" + val.time + "<br> <a href=\"" + val.link + "\">" + val.desc + "</a> </p>");
       });
     });
