@@ -42,7 +42,7 @@ module.exports = function(grunt) {
   // Initial config
   var config = {
     pkg: grunt.file.readJSON('package.json')
-  }
+  };
 
   // Load tasks from the tasks folder
   grunt.loadTasks('tasks');
