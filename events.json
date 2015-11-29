@@ -1,17 +1,5 @@
 [
   {
-    "time": "28/11 - 11:00",
-    "desc": "Forming ELLAK Working Groups",
-    "link": "https://ellak.gr/oldwiki/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/kalesma-omadon-ergasias-2014/"
-
-  },
-  {
-    "time": "29/11 - 18:00",
-    "desc": "SheSharp Meeting",
-    "link": "http://www.shesharp.org/"
-
-  },
-  {
     "time": "30/11 - 18:00",
     "desc": "Zeitgeist Thessaloniki Chapter meeting",
     "link": "http://www.tzm.gr/advocate/thessaloniki-chapter-meetings/"
@@ -20,6 +8,18 @@
   {
     "time": "03/12 - 11:00-17.00",
     "desc": "Global 3D printing day",
+    "link": ""
+
+  },
+  {
+    "time": "13/12 - 15:00-21.00",
+    "desc": "Intro to Web Dev Series",
+    "link": ""
+
+  },
+  {
+    "time": "20/12 - 15:00-21.00",
+    "desc": "Intro to Web Dev Series",
     "link": ""
 
   }
