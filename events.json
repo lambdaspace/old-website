@@ -4,5 +4,15 @@
     "desc": "Intro to Web Dev Series, Part {B}",
     "link": "https://www.facebook.com/events/1694396737472537/"
 
+  },
+  {
+    "time": "22/12 - 20:00-22:00 ",
+    "desc": "Node.js Xmas 2015",
+    "link": "http://www.meetup.com/Thessaloniki-Node-js-Meetup/events/227409698/?gj=co2&rv=co2"
+  },
+  {
+    "time": "23/12 - 18:00-20:00",
+    "desc": "Xmas Mozcoffee 2015",
+    "link": "https://reps.mozilla.org/e/xmas-mozcoffee-thessaloniki-2015/"
   }
 ]
